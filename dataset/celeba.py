@@ -20,7 +20,7 @@ class CelebaSetsDataset(data.Dataset):
 
     def __init__(self,
                  dataset="celeba",
-                 data_dir="/scratch/gigi/data/celeba",
+                 data_dir="./data/celeba",
                  sample_size=5,
                  num_classes_task=1,
                  split="train",
@@ -30,7 +30,7 @@ class CelebaSetsDataset(data.Dataset):
         with open("./data/class.pkl", "rb") as f:
             self.map_classes = pickle.load(f)
         self.data_dir = data_dir
-        self.data_dir = "./data/celeba/"  # "/scratch/gigi/data/celeba/"
+        self.data_dir = "./data/celeba/" 
         self.sample_size = sample_size
         self.split = split
         self.mix = True
